@@ -54,6 +54,8 @@ export async function generateStaticParams() {
   return params;
 }
 
+export const dynamicParams = false;
+
 export default function BlogTopicPage({ params }: BlogTopicPageProps) {
   const city = citiesData.find(c => c.slug === params.city);
   const topic = blogTopics.find(t => t.slug === params.topic);

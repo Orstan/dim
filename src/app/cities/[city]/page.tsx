@@ -35,6 +35,8 @@ export async function generateStaticParams() {
   }));
 }
 
+export const dynamicParams = false;
+
 // Компонент сторінки міста
 export default function CityPage({ params }: CityPageProps) {
   const city = citiesData.find(c => c.slug === params.city);

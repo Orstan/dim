@@ -52,6 +52,8 @@ export async function generateStaticParams() {
   return params;
 }
 
+export const dynamicParams = false;
+
 export default function SectionPage({ params }: SectionPageProps) {
   const city = citiesData.find(c => c.slug === params.city);
   const section = sections.find(s => s.slug === params.section);

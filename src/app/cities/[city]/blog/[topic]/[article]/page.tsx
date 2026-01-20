@@ -60,6 +60,8 @@ export async function generateStaticParams() {
   return params;
 }
 
+export const dynamicParams = false;
+
 export default function BlogArticlePage({ params }: BlogArticlePageProps) {
   const city = citiesData.find(c => c.slug === params.city);
   const topic = blogTopics.find(t => t.slug === params.topic);
