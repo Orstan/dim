@@ -93,20 +93,21 @@ export default function BlogArticlePage({ params }: BlogArticlePageProps) {
               {topic.title} - Стаття {articleNumber}
             </h1>
             <p className="text-lg text-amber-800 mb-6">
-              Пансіонат "Сонячна Долина" у місті {city.name}
+              Пансіонат "Сонячна Долина" для жителів міста {city.name}
             </p>
             
             <div className="prose max-w-none">
               <h2 className="text-2xl font-semibold text-amber-900 mt-6 mb-4">Вступ</h2>
               <p className="text-gray-700 mb-4">
-                У пансіонаті "Сонячна Долина" у місті {city.name} ми приділяємо велику увагу питанням, пов'язаним з {topic.title.toLowerCase()}. 
+                У пансіонаті "Сонячна Долина" (м.Одеса, с.Лески, вул.Шевченка, 4Б) ми приділяємо велику увагу 
+                питанням, пов'язаним з {topic.title.toLowerCase()}. Ми приймаємо літніх людей з міста {city.name} та всієї Одеської області. 
                 Наші фахівці мають багаторічний досвід роботи та готові поділитися своїми знаннями.
               </p>
 
               <h2 className="text-2xl font-semibold text-amber-900 mt-6 mb-4">Основна інформація</h2>
               <p className="text-gray-700 mb-4">
-                Ця стаття №{articleNumber} містить корисну інформацію про {topic.title.toLowerCase()}, яка допоможе жителям міста {city.name} 
-                та їхнім родичам краще зрозуміти ці важливі питання. Ми прагнемо надавати актуальну та перевірену інформацію.
+                Ця стаття №{articleNumber} містить корисну інформацію про {topic.title.toLowerCase()} для жителів міста {city.name} 
+                та інших міст Одеської області. Ми прагнемо надавати актуальну та перевірену інформацію.
               </p>
 
               <h2 className="text-2xl font-semibold text-amber-900 mt-6 mb-4">Наші рекомендації</h2>
@@ -119,14 +120,15 @@ export default function BlogArticlePage({ params }: BlogArticlePageProps) {
 
               <h2 className="text-2xl font-semibold text-amber-900 mt-6 mb-4">Чому обирають нас</h2>
               <p className="text-gray-700 mb-4">
-                Пансіонат "Сонячна Долина" у місті {city.name} відомий своїм професійним підходом до питань {topic.title.toLowerCase()}. 
+                Пансіонат "Сонячна Долина" відомий своїм професійним підходом до питань {topic.title.toLowerCase()}. 
+                Ми приймаємо літніх людей з міста {city.name} та всієї Одеської області. 
                 Ми пропонуємо комплексний підхід та індивідуальну увагу до кожного мешканця.
               </p>
 
               <div className="bg-amber-50 border-l-4 border-amber-500 p-4 mt-6">
                 <p className="text-amber-900 font-semibold">Потрібна консультація?</p>
                 <p className="text-amber-800">
-                  Зв'яжіться з нами за телефоном +380 97 47 57 14 або відвідайте наш пансіонат у с. Лески, вул. Шкільна, 45
+                  Зв'яжіться з нами за телефоном +380 97 47 57 14 або відвідайте наш пансіонат за адресою: м.Одеса, с.Лески, вул.Шевченка, 4Б
                 </p>
               </div>
             </div>

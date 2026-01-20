@@ -83,12 +83,13 @@ export default function ServiceCategoryPage({ params }: ServiceCategoryPageProps
               {category.name}
             </h1>
             <p className="text-lg text-amber-800 mb-6">
-              Пансіонат "Сонячна Долина" у місті {city.name}
+              Пансіонат "Сонячна Долина" для жителів міста {city.name}
             </p>
             
             <div className="prose max-w-none">
               <p className="text-gray-700 mb-6">
-                Наш пансіонат пропонує високоякісні послуги з {category.name.toLowerCase()} для літніх людей у місті {city.name}. 
+                Пансіонат "Сонячна Долина" (м.Одеса, с.Лески, вул.Шевченка, 4Б) пропонує високоякісні послуги з {category.name.toLowerCase()} 
+                для літніх людей з міста {city.name} та інших міст Одеської області. 
                 Ми забезпечуємо індивідуальний підхід та професійний догляд цілодобово.
               </p>
 
@@ -132,7 +133,8 @@ export default function ServiceCategoryPage({ params }: ServiceCategoryPageProps
               <div className="bg-gradient-to-r from-amber-500 to-amber-600 text-white p-6 rounded-lg">
                 <h3 className="text-xl font-semibold mb-3">Потрібна консультація?</h3>
                 <p className="mb-4">
-                  Зв'яжіться з нами, щоб дізнатися більше про наші послуги з {category.name.toLowerCase()} у місті {city.name}
+                  Зв'яжіться з нами, щоб дізнатися більше про наші послуги з {category.name.toLowerCase()} для жителів міста {city.name}.
+                  Пансіонат: м.Одеса, с.Лески, вул.Шевченка, 4Б
                 </p>
                 <div className="flex flex-col md:flex-row gap-4">
                   <a href={`/cities/${city.slug}/contacts`} className="bg-white text-amber-600 px-6 py-2 rounded font-semibold hover:bg-amber-50 transition text-center">

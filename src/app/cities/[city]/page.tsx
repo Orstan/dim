@@ -55,24 +55,25 @@ export default function CityPage({ params }: CityPageProps) {
         <div className="container mx-auto px-4 py-8">
           <div className="mb-8">
             <h1 className="text-3xl md:text-4xl font-bold text-amber-900 mb-4">
-              Пансіонат "Сонячна Долина" у місті {city.name}
+              Пансіонат "Сонячна Долина" для жителів міста {city.name}
             </h1>
             <p className="text-lg text-amber-800">
-              Професійний догляд за літніми людьми в комфортних умовах
+              Професійний догляд за літніми людьми з міста {city.name} та Одеської області
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
             <div className="bg-white rounded-lg shadow-lg p-6 border border-amber-200">
-              <h2 className="text-2xl font-semibold text-amber-900 mb-4">Про наш пансіонат у місті {city.name}</h2>
+              <h2 className="text-2xl font-semibold text-amber-900 mb-4">Про наш пансіонат для жителів міста {city.name}</h2>
               <p className="text-gray-700 mb-4">
-                Пансіонат "Сонячна Долина" у місті {city.name} пропонує комфортне проживання та професійний догляд 
-                за літніми людьми. Наш заклад розташований у тихому та мальовничому районі, що забезпечує спокійну 
-                атмосферу для наших мешканців.
+                Пансіонат "Сонячна Долина" приймає літніх людей з міста {city.name} та інших міст Одеської області. 
+                Наш заклад розташований в екологічно чистому районі м.Одеси (с.Лески), що забезпечує спокійну 
+                атмосферу та комфортні умови для наших мешканців.
               </p>
               <p className="text-gray-700 mb-4">
                 Ми забезпечуємо цілодобовий догляд, медичне обслуговування, збалансоване харчування та різноманітні 
-                активності для підтримки фізичного та емоційного здоров'я наших мешканців.
+                активності для підтримки фізичного та емоційного здоров'я. Жителі міста {city.name} можуть скористатися 
+                всіма нашими послугами з комфортом та безпекою.
               </p>
               <div className="mt-6">
                 <Link href={`/cities/${city.slug}/services`} className="inline-block bg-amber-500 hover:bg-amber-600 text-white font-semibold py-2 px-4 rounded transition duration-300">
@@ -93,7 +94,7 @@ export default function CityPage({ params }: CityPageProps) {
           </div>
           
           <div className="mb-12">
-            <h2 className="text-2xl font-semibold text-amber-900 mb-6">Наші переваги у місті {city.name}</h2>
+            <h2 className="text-2xl font-semibold text-amber-900 mb-6">Наші переваги для жителів міста {city.name}</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {[
                 {
@@ -118,7 +119,7 @@ export default function CityPage({ params }: CityPageProps) {
                 },
                 {
                   title: "Зручне розташування",
-                  description: `Пансіонат розташований у тихому районі міста ${city.name}, з гарною транспортною доступністю.`
+                  description: `Пансіонат розташований в екологічно чистому районі м.Одеси, легко доступний для жителів міста ${city.name}.`
                 }
               ].map((advantage, index) => (
                 <div key={index} className="bg-white rounded-lg shadow-md p-6 border border-amber-200">
@@ -130,7 +131,7 @@ export default function CityPage({ params }: CityPageProps) {
           </div>
           
           <div className="mb-12">
-            <h2 className="text-2xl font-semibold text-amber-900 mb-6">Послуги у місті {city.name}</h2>
+            <h2 className="text-2xl font-semibold text-amber-900 mb-6">Послуги для жителів міста {city.name}</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <Link href={`/cities/${city.slug}/services/elderly-care`} className="bg-white rounded-lg shadow-md p-6 border border-amber-200 hover:shadow-lg transition duration-300">
                 <h3 className="text-xl font-semibold text-amber-800 mb-3">Догляд за літніми</h3>
@@ -157,12 +158,13 @@ export default function CityPage({ params }: CityPageProps) {
           </div>
           
           <div className="mb-12">
-            <h2 className="text-2xl font-semibold text-amber-900 mb-6">Контакти у місті {city.name}</h2>
+            <h2 className="text-2xl font-semibold text-amber-900 mb-6">Наші контакти</h2>
             <div className="bg-white rounded-lg shadow-lg p-6 border border-amber-200">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <h3 className="text-xl font-semibold text-amber-800 mb-3">Адреса</h3>
-                  <p className="text-gray-700 mb-4">м.{city.name}, с.Лески, вул.Шевченка, 4Б</p>
+                  <h3 className="text-xl font-semibold text-amber-800 mb-3">Адреса пансіонату</h3>
+                  <p className="text-gray-700 mb-4">м.Одеса, с.Лески, вул.Шевченка, 4Б</p>
+                  <p className="text-sm text-amber-700 mb-4">Приймаємо літніх людей з міста {city.name} та всієї Одеської області</p>
                   
                   <h3 className="text-xl font-semibold text-amber-800 mb-3">Телефон</h3>
                   <p className="text-gray-700 mb-4">+380 (48) 123-45-67</p>

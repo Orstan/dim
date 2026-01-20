@@ -82,20 +82,20 @@ export default function SectionPage({ params }: SectionPageProps) {
               {section.name}
             </h1>
             <p className="text-lg text-amber-800 mb-6">
-              Пансіонат "Сонячна Долина" у місті {city.name}
+              Пансіонат "Сонячна Долина" для жителів міста {city.name}
             </p>
             
             <div className="prose max-w-none">
               <p className="text-gray-700 mb-6">
-                Інформація про {section.name.toLowerCase()} пансіонату "Сонячна Долина" у місті {city.name}. 
+                {section.name} пансіонату "Сонячна Долина" для жителів міста {city.name} та Одеської області. 
                 Ми пропонуємо професійний підхід та комфортні умови для всіх наших мешканців.
               </p>
 
               <h2 className="text-2xl font-semibold text-amber-900 mb-4">Про наш пансіонат</h2>
               <p className="text-gray-700 mb-4">
-                Пансіонат "Сонячна Долина" у місті {city.name} - це сучасний заклад для комфортного проживання 
-                та професійного догляду за літніми людьми. Ми створили всі умови для того, щоб наші мешканці 
-                почувалися як вдома.
+                Пансіонат "Сонячна Долина" розташований в м.Одеса, с.Лески, вул.Шевченка, 4Б. 
+                Ми приймаємо літніх людей з міста {city.name} та інших міст Одеської області. 
+                Наш заклад - це сучасний пансіонат в екологічно чистому районі з комфортними умовами проживання.
               </p>
 
               <h2 className="text-2xl font-semibold text-amber-900 mb-4 mt-6">Що ми пропонуємо</h2>
@@ -138,7 +138,7 @@ export default function SectionPage({ params }: SectionPageProps) {
               <div className="bg-gradient-to-r from-amber-500 to-amber-600 text-white p-6 rounded-lg mt-8">
                 <h3 className="text-xl font-semibold mb-3">Хочете дізнатися більше?</h3>
                 <p className="mb-4">
-                  Зв'яжіться з нами для детальної консультації про послуги пансіонату у місті {city.name}
+                  Зв'яжіться з нами для детальної консультації про послуги пансіонату для жителів міста {city.name}
                 </p>
                 <div className="flex flex-col md:flex-row gap-4">
                   <a href="/contacts" className="bg-white text-amber-600 px-6 py-3 rounded font-semibold hover:bg-amber-50 transition text-center">

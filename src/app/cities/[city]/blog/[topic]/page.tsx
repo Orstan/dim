@@ -84,10 +84,11 @@ export default function BlogTopicPage({ params }: BlogTopicPageProps) {
               {topic.title}
             </h1>
             <p className="text-lg text-amber-800 mb-6">
-              Блог пансіонату "Сонячна Долина" у місті {city.name}
+              Блог пансіонату "Сонячна Долина" для жителів міста {city.name}
             </p>
             <p className="text-gray-700">
-              Корисні статті про {topic.title.toLowerCase()} від експертів пансіонату "Сонячна Долина" у місті {city.name}. 
+              Корисні статті про {topic.title.toLowerCase()} від експертів пансіонату "Сонячна Долина" (м.Одеса, с.Лески) 
+              для жителів міста {city.name} та Одеської області. 
               Наші фахівці діляться досвідом та знаннями для покращення якості життя літніх людей.
             </p>
           </div>
@@ -104,7 +105,7 @@ export default function BlogTopicPage({ params }: BlogTopicPageProps) {
                   {topic.title} - Стаття {num}
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  Корисна інформація про {topic.title.toLowerCase()} для мешканців міста {city.name}
+                  Корисна інформація про {topic.title.toLowerCase()} для жителів міста {city.name} та Одеської області
                 </p>
                 <span className="text-amber-600 font-medium hover:underline">
                   Читати далі →
