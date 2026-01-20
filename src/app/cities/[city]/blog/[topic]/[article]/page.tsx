@@ -61,6 +61,7 @@ export async function generateStaticParams() {
 }
 
 export const dynamicParams = false;
+export const dynamic = 'force-static';
 
 export default function BlogArticlePage({ params }: BlogArticlePageProps) {
   const city = citiesData.find(c => c.slug === params.city);

@@ -53,6 +53,7 @@ export async function generateStaticParams() {
 }
 
 export const dynamicParams = false;
+export const dynamic = 'force-static';
 
 export default function ServiceCategoryPage({ params }: ServiceCategoryPageProps) {
   const city = citiesData.find(c => c.slug === params.city);
