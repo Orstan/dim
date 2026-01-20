@@ -3,7 +3,6 @@
 import { useState, FormEvent } from 'react';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
-import GoogleMap from '../../components/GoogleMap';
 
 export default function ContactsPage() {
   const [formSubmitted, setFormSubmitted] = useState(false);
@@ -261,16 +260,21 @@ export default function ContactsPage() {
               </p>
               
               <div className="h-96 rounded-lg overflow-hidden border-2 border-amber-300 bg-white">
-                <GoogleMap 
-                  lat={46.562977253371635} 
-                  lng={30.815330704893505} 
-                  zoom={15} 
-                  markerTitle="Пансіонат 'Сонячна Долина'" 
+                <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2756.8!2d30.815330704893505!3d46.562977253371635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDbCsDMzJzQ2LjciTiAzMMKwNDgnNTUuMiJF!5e0!3m2!1suk!2sua!4v1234567890123!5m2!1suk!2sua"
+                  width="100%" 
+                  height="100%" 
+                  style={{ border: 0 }} 
+                  allowFullScreen 
+                  loading="lazy" 
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Карта розташування пансіонату Сонячна Долина"
                 />
               </div>
             </div>
           </div>
         </section>
+        
       </main>
       
       <Footer />
