@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Генератор фавікону для Сонячна Долина</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 20px;
+      background-color: #f8f9fa;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    canvas {
+      border: 1px solid #ddd;
+      margin: 20px auto;
+      display: block;
+    }
+    .controls {
+      margin: 20px 0;
+    }
+    button {
+      background-color: #d97706;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 0 5px;
+    }
+    button:hover {
+      background-color: #b45309;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Генератор фавікону для пансіонату "Сонячна Долина"</h1>
+    <p>Використовуйте цей інструмент для створення простого фавікону.</p>
+    
+    <canvas id="faviconCanvas" width="64" height="64"></canvas>
+    
+    <div class="controls">
+      <button id="generateBtn">Згенерувати фавікон</button>
+      <button id="downloadBtn">Завантажити фавікон</button>
+    </div>
+    
+    <div>
+      <p>Після завантаження, перейменуйте файл на "favicon.ico" і розмістіть його в директорії public.</p>
+    </div>
+  </div>
+
+  <script>
+    const canvas = document.getElementById('faviconCanvas');
+    const ctx = canvas.getContext('2d');
+    
+    function drawSun() {
+      // Очистити канвас
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      
+      // Фон - світло-бурштиновий
+      ctx.fillStyle = '#fef3c7'; // amber-50
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      
+      // Сонце
+      const centerX = canvas.width / 2;
+      const centerY = canvas.height / 2;
+      const radius = 20;
+      
+      // Промені сонця
+      ctx.beginPath();
+      ctx.fillStyle = '#d97706'; // amber-600
+      for (let i = 0; i < 12; i++) {
+        const angle = (i * Math.PI * 2) / 12;
+        const x1 = centerX + Math.cos(angle) * (radius + 5);
+        const y1 = centerY + Math.sin(angle) * (radius + 5);
+        const x2 = centerX + Math.cos(angle) * (radius + 15);
+        const y2 = centerY + Math.sin(angle) * (radius + 15);
+        
+        ctx.moveTo(x1, y1);
+        ctx.lineTo(x2, y2);
+        ctx.lineWidth = 3;
+        ctx.strokeStyle = '#d97706';
+        ctx.stroke();
+      }
+      
+      // Коло сонця
+      ctx.beginPath();
+      ctx.arc(centerX, centerY, radius, 0, Math.PI * 2);
+      ctx.fillStyle = '#f59e0b'; // amber-500
+      ctx.fill();
+      
+      // Гори (долина)
+      ctx.beginPath();
+      ctx.moveTo(0, 64);
+      ctx.lineTo(20, 40);
+      ctx.lineTo(30, 50);
+      ctx.lineTo(45, 30);
+      ctx.lineTo(64, 64);
+      ctx.fillStyle = '#78350f'; // amber-900
+      ctx.fill();
+    }
+    
+    document.getElementById('generateBtn').addEventListener('click', drawSun);
+    
+    document.getElementById('downloadBtn').addEventListener('click', function() {
+      // Створюємо тимчасове посилання для завантаження
+      const link = document.createElement('a');
+      link.download = 'favicon.png';
+      link.href = canvas.toDataURL('image/png');
+      link.click();
+    });
+    
+    // Генеруємо фавікон при завантаженні сторінки
+    window.onload = drawSun;
+  </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Перенаправлення...</title>
+  <script>
+    // Функція для отримання параметрів URL
+    function getUrlParams() {
+      const params = {};
+      window.location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(str, key, value) {
+        params[key] = decodeURIComponent(value);
+      });
+      return params;
+    }
+
+    // Функція для перенаправлення на правильну сторінку
+    function redirectToCorrectPage() {
+      const path = window.location.pathname;
+      
+      // Отримуємо параметри з URL
+      const params = getUrlParams();
+      const originalPath = params.path || '';
+      
+      if (originalPath) {
+        // Якщо є параметр path, перенаправляємо на нього
+        window.location.replace('/' + originalPath);
+        return;
+      }
+      
+      // Перевіряємо, чи це URL міста
+      const cityMatch = path.match(/^\/cities\/([^\/]+)\/?$/);
+      if (cityMatch) {
+        const citySlug = cityMatch[1];
+        window.location.replace('/cities/' + citySlug + '/');
+        return;
+      }
+      
+      // Перевіряємо, чи це URL секції міста
+      const citySectionMatch = path.match(/^\/cities\/([^\/]+)\/([^\/]+)\/?$/);
+      if (citySectionMatch) {
+        const citySlug = citySectionMatch[1];
+        const sectionSlug = citySectionMatch[2];
+        window.location.replace('/cities/' + citySlug + '/' + sectionSlug + '/');
+        return;
+      }
+      
+      // Перевіряємо, чи це URL блог-статті
+      const blogMatch = path.match(/^\/blog\/([^\/]+)\/?$/);
+      if (blogMatch) {
+        const blogSlug = blogMatch[1];
+        window.location.replace('/blog/' + blogSlug + '/');
+        return;
+      }
+      
+      // Якщо нічого не підійшло, перенаправляємо на головну
+      window.location.replace('/');
+    }
+
+    // Запускаємо перенаправлення при завантаженні сторінки
+    window.onload = redirectToCorrectPage;
+  </script>
+</head>
+<body>
+  <h1>Перенаправлення...</h1>
+  <p>Зачекайте, будь ласка, ви будете перенаправлені на потрібну сторінку.</p>
+</body>
+</html>

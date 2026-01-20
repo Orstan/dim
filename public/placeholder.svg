@@ -1,0 +1,5 @@
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#f5f0e0" />
+  <text x="50%" y="50%" font-family="Arial" font-size="24" fill="#b45309" text-anchor="middle">Теплий дім</text>
+  <text x="50%" y="65%" font-family="Arial" font-size="16" fill="#b45309" text-anchor="middle">Тимчасове зображення</text>
+</svg>

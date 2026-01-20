@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --primary: #B45309;
+  --primary-light: #FEF3C7;
+  --primary-dark: #92400E;
+}
+
+/* Глобальні змінні кольорів та шрифтів */
+:root {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: 'Roboto', sans-serif;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Roboto', sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* Плавні переходи для всіх елементів */
+* {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Стилі для кнопок */
+button, .btn {
+  transition: all 0.2s ease;
+}
+
+button:hover, .btn:hover {
+  transform: translateY(-2px);
+}
+
+/* Стилі для посилань */
+a {
+  transition: color 0.2s ease;
+}
+
+/* Стилі для заголовків */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* Стилі для зображень */
+img {
+  max-width: 100%;
+  height: auto;
+}

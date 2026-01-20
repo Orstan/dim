@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Дозволяємо всім пошуковим системам індексувати весь сайт
+Sitemap: https://soniachna.com/sitemap.xml
