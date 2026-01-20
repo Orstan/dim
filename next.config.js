@@ -1,16 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Додаємо output: 'export' для статичного експорту на Hostinger
-  output: 'export',
-  // Встановлюємо базовий URL для статичних файлів
-  assetPrefix: '/',
-  // Встановлюємо базовий шлях для всіх маршрутів
-  basePath: '',
+  // Конфігурація для Vercel
+  // output: 'export', // Видалено для розгортання на Vercel
+  
   images: {
     domains: ['source.unsplash.com', 'images.pexels.com'],
-    unoptimized: true, // Потрібно для статичного експорту
+    // unoptimized: true, // Видалено для Vercel, який оптимізує зображення автоматично
   },
-  // Вимикаємо строгий режим маршрутів, щоб уникнути помилок при статичному експорті
+  // Зберігаємо завершальні слеші для кращої сумісності
   trailingSlash: true,
   // Ігноруємо помилки типів під час білду
   typescript: {
