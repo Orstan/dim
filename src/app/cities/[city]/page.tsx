@@ -71,7 +71,7 @@ export default function CityPage({ params }: CityPageProps) {
                 атмосферу та комфортні умови для наших мешканців.
               </p>
               <p className="text-gray-700 mb-4">
-                Ми забезпечуємо цілодобовий догляд, медичне обслуговування, збалансоване харчування та різноманітні 
+                Ми забезпечуємо цілодобовий догляд, збалансоване харчування та різноманітні 
                 активності для підтримки фізичного та емоційного здоров'я. Жителі міста {city.name} можуть скористатися 
                 всіма нашими послугами з комфортом та безпекою.
               </p>
@@ -106,10 +106,6 @@ export default function CityPage({ params }: CityPageProps) {
                   description: "Затишні кімнати, обладнані всім необхідним для комфортного проживання літніх людей."
                 },
                 {
-                  title: "Медичний нагляд",
-                  description: "Цілодобовий медичний нагляд та регулярні огляди лікарями різних спеціальностей."
-                },
-                {
                   title: "Збалансоване харчування",
                   description: "Індивідуальний підхід до харчування з урахуванням особливостей здоров'я кожного мешканця."
                 },
@@ -137,13 +133,13 @@ export default function CityPage({ params }: CityPageProps) {
                 <h3 className="text-xl font-semibold text-amber-800 mb-3">Догляд за літніми</h3>
                 <p className="text-gray-700">Професійний догляд за літніми людьми з урахуванням індивідуальних потреб кожного мешканця.</p>
               </Link>
-              <Link href={`/cities/${city.slug}/services/medical-services`} className="bg-white rounded-lg shadow-md p-6 border border-amber-200 hover:shadow-lg transition duration-300">
-                <h3 className="text-xl font-semibold text-amber-800 mb-3">Медичні послуги</h3>
-                <p className="text-gray-700">Цілодобовий медичний нагляд, регулярні огляди та консультації лікарів різних спеціальностей.</p>
+              <Link href={`/cities/${city.slug}/services/companion-care`} className="bg-white rounded-lg shadow-md p-6 border border-amber-200 hover:shadow-lg transition duration-300">
+                <h3 className="text-xl font-semibold text-amber-800 mb-3">Супровід та допомога</h3>
+                <p className="text-gray-700">Цілодобовий супровід, допомога у повсякденних справах та підтримка мешканців.</p>
               </Link>
-              <Link href={`/cities/${city.slug}/services/rehabilitation`} className="bg-white rounded-lg shadow-md p-6 border border-amber-200 hover:shadow-lg transition duration-300">
-                <h3 className="text-xl font-semibold text-amber-800 mb-3">Реабілітація</h3>
-                <p className="text-gray-700">Реабілітаційні програми для відновлення після травм, інсультів та інших захворювань.</p>
+              <Link href={`/cities/${city.slug}/services/activities`} className="bg-white rounded-lg shadow-md p-6 border border-amber-200 hover:shadow-lg transition duration-300">
+                <h3 className="text-xl font-semibold text-amber-800 mb-3">Активності та дозвілля</h3>
+                <p className="text-gray-700">Організація дозвілля, розважальні заходи та активності для підтримки активного способу життя.</p>
               </Link>
               <Link href={`/cities/${city.slug}/services/psychological-support`} className="bg-white rounded-lg shadow-md p-6 border border-amber-200 hover:shadow-lg transition duration-300">
                 <h3 className="text-xl font-semibold text-amber-800 mb-3">Психологічна підтримка</h3>

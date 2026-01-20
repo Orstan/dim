@@ -113,9 +113,9 @@ export default function SectionPage({ params }: SectionPageProps) {
                   </p>
                 </div>
                 <div className="bg-amber-50 p-5 rounded-lg border border-amber-200">
-                  <h3 className="font-semibold text-amber-900 mb-2">✓ Медичний догляд</h3>
+                  <h3 className="font-semibold text-amber-900 mb-2">✓ Цілодобова підтримка</h3>
                   <p className="text-gray-700 text-sm">
-                    Цілодобове медичне спостереження та підтримка
+                    Цілодобове спостереження та підтримка мешканців
                   </p>
                 </div>
                 <div className="bg-amber-50 p-5 rounded-lg border border-amber-200">

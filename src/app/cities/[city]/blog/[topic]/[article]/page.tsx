@@ -114,7 +114,7 @@ export default function BlogArticlePage({ params }: BlogArticlePageProps) {
               <ul className="list-disc pl-6 mb-4 text-gray-700">
                 <li className="mb-2">Регулярні консультації з фахівцями пансіонату</li>
                 <li className="mb-2">Індивідуальний підхід до кожного мешканця</li>
-                <li className="mb-2">Постійний моніторинг стану здоров'я</li>
+                <li className="mb-2">Постійне спостереження та турбота</li>
                 <li className="mb-2">Комфортні умови проживання та догляду</li>
               </ul>
 

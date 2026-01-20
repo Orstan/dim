@@ -99,7 +99,7 @@ export default function ServiceCategoryPage({ params }: ServiceCategoryPageProps
                 <li className="mb-2">Кваліфікований персонал з багаторічним досвідом</li>
                 <li className="mb-2">Цілодобове спостереження та підтримка</li>
                 <li className="mb-2">Сучасне обладнання та комфортні умови</li>
-                <li className="mb-2">Регулярний моніторинг стану здоров'я</li>
+                <li className="mb-2">Регулярне спостереження та підтримка</li>
               </ul>
 
               <h2 className="text-2xl font-semibold text-amber-900 mb-4">Переваги нашого пансіонату</h2>
